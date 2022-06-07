@@ -1,5 +1,19 @@
 # Dictionary
 
+## Changes in This Fork
+
+### Background
+
+I needed values other than strings in the dictionary, so I created a new class Value that can store boolean, integer, float, and strings. Dictionary is changed to accept these as values. 
+
+As I don't use it, JSON functionality has been removed.
+
+### Memory Management
+
+If you insert a value into a dictionary, the dictionary takes over ownership of the value and will delete it if no longer needed.
+
+When retreiving values form a dictionary, you get a pointer to the value but the dictionary keeps ownership; it is guaranteed to remain valid only until the next change to the dictionary. You can change the value, and the change will be reflected in the dictionary.
+
 ## Dictionary data type
 
 [![arduino-library-badge](https://www.ardu-badge.com/badge/Dictionary.svg?)](https://www.ardu-badge.com/Dictionary)
